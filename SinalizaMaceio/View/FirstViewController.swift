@@ -12,42 +12,44 @@ class FirstViewController: UIViewController {
     lazy var container: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.9647058845, green: 0.9647058845, blue: 0.9647058845, alpha: 1)
         return view
     }()
     
     lazy var titleLabel: UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.numberOfLines = 0
+            label.font = UIFont.boldSystemFont(ofSize: 28)
+            label.textColor = .darkGray
+            label.text = "Bem vindo à\nMaceió"
+            
+            return label
+        }()
+    
+    
+    lazy var bodyLabel: UILabel = {
        
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Helvetica Neue", size: 20)
-        label.textColor = .white
-        label.text = "Bem vindo!"
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = .gray
+        label.text = "Maceió, com suas praias deslumbrantes, está se preparando para prosperar e se transformar através da tecnologia."
         
         return label
     }()
     
-    lazy var searchButton: UIButton = {
-       
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: ""), for: .normal)
-        button.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
-        
-        return button
-    }()
-    
-    lazy var searchBar: UISearchBar = {
-            let searchBar = UISearchBar()
-            searchBar.translatesAutoresizingMaskIntoConstraints = false
-            searchBar.placeholder = "Pesquisar"
-            return searchBar
+    lazy var startButton: UIButton = {
+            let button = UIButton(type: .system)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.setTitle("Start", for: .normal)
+            button.setTitleColor(.white, for: .normal)
+            button.layer.cornerRadius = 27
+            button.clipsToBounds = true
+            addGradientToButton(button)
+            return button
         }()
-    
-    @objc func searchButtonTapped() {
-            
-            print("Botão de pesquisa foi tocado!")
-        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,11 +58,30 @@ class FirstViewController: UIViewController {
         
     }
     
+    override func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+        
+            addGradientToButton(startButton)
+        }
+    
+    private func addGradientToButton(_ button: UIButton) {
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.frame = button.bounds
+            gradientLayer.colors = [UIColor.blue.cgColor, UIColor.white.cgColor]
+            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1.5, y: 1)
+            
+            button.layer.sublayers?.removeAll(where: { $0 is CAGradientLayer })
+            
+            button.layer.insertSublayer(gradientLayer, at: 0)
+        }
+    
     func setHierarchy() {
         
         view.addSubview(container)
         container.addSubview(titleLabel)
-        container.addSubview(searchButton)
+        container.addSubview(bodyLabel)
+        container.addSubview(startButton)
     }
     
     func setConstraints() {
@@ -72,11 +93,19 @@ class FirstViewController: UIViewController {
             container.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             container.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 100),
+            titleLabel.bottomAnchor.constraint(equalTo: bodyLabel.topAnchor, constant: -20),
             titleLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 40),
             
-            searchButton.topAnchor.constraint(equalTo: container.topAnchor, constant: 50),
-            searchButton.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -50),
+            bodyLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -130),
+            bodyLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 40),
+            bodyLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -80),
+            bodyLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 100),
+            
+            startButton.topAnchor.constraint(equalTo: container.bottomAnchor, constant: -100),
+            startButton.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -50),
+            startButton.widthAnchor.constraint(equalToConstant: 55),
+            startButton.heightAnchor.constraint(equalToConstant: 55)
+            
         ])
     }
 
