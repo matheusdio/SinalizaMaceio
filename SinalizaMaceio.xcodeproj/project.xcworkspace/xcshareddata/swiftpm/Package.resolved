@@ -1,0 +1,24 @@
+{
+  "originHash" : "16a6f9fad7ad38671aa42b909f0d8ebdd4f0bd2ffbcee6a90f1f4e3b7b0638b0",
+  "pins" : [
+    {
+      "identity" : "tomtom-sdk-spm-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomtom-international/tomtom-sdk-spm-core",
+      "state" : {
+        "revision" : "0df08d9ccc51506447caf18d8f4b9b96ff015163",
+        "version" : "0.58.0"
+      }
+    },
+    {
+      "identity" : "tomtom-sdk-spm-navigation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomtom-international/tomtom-sdk-spm-navigation.git",
+      "state" : {
+        "revision" : "ac880e9db2e0c25d1d09a26c480c6a8bcc367325",
+        "version" : "0.58.0"
+      }
+    }
+  ],
+  "version" : 3
+}
