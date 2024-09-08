@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F03302F2C88D9770073DD4C /* ZoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F03302E2C88D9770073DD4C /* ZoomCollectionViewCell.swift */; };
 		2F2E4C762C31BD1D000E14EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E4C752C31BD1D000E14EE /* AppDelegate.swift */; };
 		2F2E4C782C31BD1D000E14EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E4C772C31BD1D000E14EE /* SceneDelegate.swift */; };
 		2F2E4C7F2C31BD1E000E14EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E4C7E2C31BD1E000E14EE /* Assets.xcassets */; };
@@ -114,6 +115,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F03302E2C88D9770073DD4C /* ZoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F2E4C722C31BD1D000E14EE /* SinalizaMaceio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinalizaMaceio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2E4C752C31BD1D000E14EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F2E4C772C31BD1D000E14EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +234,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F03302D2C88D9370073DD4C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2F03302E2C88D9770073DD4C /* ZoomCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2F2E4C692C31BD1D000E14EE = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +294,7 @@
 		2F2E4CA52C31BDE6000E14EE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2F03302D2C88D9370073DD4C /* Cell */,
 				2F2E4CA62C31BE0C000E14EE /* FirstViewController.swift */,
 				2F2E4CA82C31C2F6000E14EE /* LaunchScreenView.swift */,
 				2FDECA122C668D1C00748052 /* MapViewController.swift */,
@@ -505,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2E4CA72C31BE0C000E14EE /* FirstViewController.swift in Sources */,
+				2F03302F2C88D9770073DD4C /* ZoomCollectionViewCell.swift in Sources */,
 				2F2E4C762C31BD1D000E14EE /* AppDelegate.swift in Sources */,
 				2F2E4C782C31BD1D000E14EE /* SceneDelegate.swift in Sources */,
 				2FDECA132C668D1C00748052 /* MapViewController.swift in Sources */,

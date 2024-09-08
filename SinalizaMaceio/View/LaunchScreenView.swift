@@ -12,7 +12,7 @@ class LaunchScreenView: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "inaliza Maceió"
+        label.text = "inaliza"
         label.font = UIFont(name: "Helvetica Neue", size: 36)
         label.textColor = .white
         label.shadowColor = .black
@@ -24,7 +24,7 @@ class LaunchScreenView: UIView {
     lazy var sinalizaImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "Spista") // Certifique-se de ter uma imagem chamada "Spista" no seu projeto
+        imageView.image = UIImage(named: "Spista")
         return imageView
     }()
     
@@ -70,7 +70,7 @@ class LaunchScreenView: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: sinalizaImageView.trailingAnchor, constant: -10),
             
             sinalizaImageView.topAnchor.constraint(equalTo: topAnchor, constant: 325),
-            sinalizaImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            sinalizaImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 100),
             sinalizaImageView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
