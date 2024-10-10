@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F03302F2C88D9770073DD4C /* ZoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F03302E2C88D9770073DD4C /* ZoomCollectionViewCell.swift */; };
+		2F0330312C8D44B30073DD4C /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0330302C8D44B30073DD4C /* CardCollectionViewCell.swift */; };
+		2F0330342C8D50E80073DD4C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0330332C8D50E80073DD4C /* Card.swift */; };
 		2F2E4C762C31BD1D000E14EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E4C752C31BD1D000E14EE /* AppDelegate.swift */; };
 		2F2E4C782C31BD1D000E14EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E4C772C31BD1D000E14EE /* SceneDelegate.swift */; };
 		2F2E4C7F2C31BD1E000E14EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E4C7E2C31BD1E000E14EE /* Assets.xcassets */; };
@@ -116,6 +118,8 @@
 
 /* Begin PBXFileReference section */
 		2F03302E2C88D9770073DD4C /* ZoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F0330302C8D44B30073DD4C /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F0330332C8D50E80073DD4C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2F2E4C722C31BD1D000E14EE /* SinalizaMaceio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinalizaMaceio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2E4C752C31BD1D000E14EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F2E4C772C31BD1D000E14EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,8 +242,17 @@
 			isa = PBXGroup;
 			children = (
 				2F03302E2C88D9770073DD4C /* ZoomCollectionViewCell.swift */,
+				2F0330302C8D44B30073DD4C /* CardCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		2F0330322C8D50D40073DD4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F0330332C8D50E80073DD4C /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2F2E4C692C31BD1D000E14EE = {
@@ -265,6 +278,7 @@
 		2F2E4C742C31BD1D000E14EE /* SinalizaMaceio */ = {
 			isa = PBXGroup;
 			children = (
+				2F0330322C8D50D40073DD4C /* Model */,
 				2F2E4CA52C31BDE6000E14EE /* View */,
 				2F2E4C752C31BD1D000E14EE /* AppDelegate.swift */,
 				2F2E4C772C31BD1D000E14EE /* SceneDelegate.swift */,
@@ -519,8 +533,10 @@
 				2F03302F2C88D9770073DD4C /* ZoomCollectionViewCell.swift in Sources */,
 				2F2E4C762C31BD1D000E14EE /* AppDelegate.swift in Sources */,
 				2F2E4C782C31BD1D000E14EE /* SceneDelegate.swift in Sources */,
+				2F0330312C8D44B30073DD4C /* CardCollectionViewCell.swift in Sources */,
 				2FDECA132C668D1C00748052 /* MapViewController.swift in Sources */,
 				2F2E4CA92C31C2F6000E14EE /* LaunchScreenView.swift in Sources */,
+				2F0330342C8D50E80073DD4C /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
