@@ -6,6 +6,5 @@ TOMTOM_SDK_VERSION = '0.58.0'
 
 target 'SinalizaMaceio' do
   use_frameworks!
-  pod 'TomTomSDKDataManagementOffline', TOMTOM_SDK_VERSION
-  pod 'TomTomSDKNDSStoreUpdater', TOMTOM_SDK_VERSION
+  pod 'Lottie-ios'
 end

@@ -64,7 +64,7 @@ class FirstViewController: UIViewController {
     }
     
     @objc private func startButtonTapped() {
-        let secondViewController = MapViewController()
+        let secondViewController = MenuViewController()
         secondViewController.modalPresentationStyle = .fullScreen
         present(secondViewController, animated: true, completion: nil)
     }
